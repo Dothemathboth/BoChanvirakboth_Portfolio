@@ -503,7 +503,8 @@ $(document).ready(function () {
     $('#workContainer').html(workHTML);
     */
 
-    // Contact Form Mailto
+    // Contact Form Mailto - REMOVED
+    /*
     $('#contact-form').on('submit', function(e) {
         e.preventDefault();
 
@@ -527,6 +528,7 @@ $(document).ready(function () {
 
         $('#contact-form')[0].reset();
     });
+    */
 
     // THIS IS NO LONGER NEEDED
     // sr.reveal('#workContainer > div', { interval: 100 });
