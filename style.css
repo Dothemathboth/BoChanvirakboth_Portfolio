@@ -351,3 +351,81 @@ body {
 .project-modal-back-btn:hover {
     background-color: #D97706; /* hover:bg-yellow-600 */
 }
+
+/* CTA buttons used on project cards */
+.card-cta-btn {
+    background-color: #2563EB;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+.card-cta-btn:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -3px rgba(37, 99, 235, 0.35);
+}
+
+.card-cta-btn.secondary {
+    background-color: #111827;
+    box-shadow: 0 10px 15px -3px rgba(17, 24, 39, 0.25);
+}
+
+.card-cta-btn.secondary:hover {
+    background-color: #0F172A;
+}
+
+/* Modal link chips */
+.project-links-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    max-width: 32rem;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 10px 25px -12px rgba(0, 0, 0, 0.3);
+}
+
+.project-link-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #111827;
+    color: #F9FAFB;
+    padding: 0.65rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.project-link-chip:hover {
+    background-color: #1F2937;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -3px rgba(15, 23, 42, 0.4);
+}
+
+.project-gallery-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px -12px rgba(0, 0, 0, 0.3);
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.project-gallery-item {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
