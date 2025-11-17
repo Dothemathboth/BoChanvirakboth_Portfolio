@@ -10,6 +10,15 @@ const projectsData = {
         description: `This link villa has a <span class="font-bold">modern three-story design</span> with a stylish <span class="font-bold">white-and-gray exterior</span>. It features <span class="font-bold">4 bedrooms and 5 bathrooms</span>, large glass windows for natural light, and open area that can be used for parking or relaxation. The building has a <span class="font-bold">semi-attached layout</span>, sharing a side wall with the neighboring unit, making it part of a connected villa row.`,
         img1: "https://placehold.co/800x600/D1D5DB/374151?text=Link+Villa+Structure",
         img2: "https://placehold.co/800x600/B0B0B0/374151?text=Link+Villa+Render",
+        gallery: [
+            "https://placehold.co/640x480/1F2937/FFFFFF?text=Link+Villa+Interior",
+            "https://placehold.co/640x480/4B5563/FFFFFF?text=Link+Villa+Exterior",
+            "https://placehold.co/640x480/9CA3AF/111827?text=Link+Villa+Site"
+        ],
+        links: {
+            demo: "https://example.com/link-villa-demo",
+            github: "https://github.com/Dothemathboth/link-villa"
+        },
         responsibilities: [
             { title: "Structural Framing Analysis", items: ["Load Calculation Table", "Modeling Structure Framing on RSA", "Reanalysis framing and panel due to reduce material cost."] },
             { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
@@ -34,6 +43,13 @@ const projectsData = {
         description: `This twin villa has a <span class="font-bold">modern three-story design</span> with a <span class="font-bold">warm orange and white exterior</span>. It includes <span class="font-bold">4 bedrooms and 5 bathrooms</span>, offering spacious living areas and private balconies. The house is <span class="font-bold">partly connected to the next unit</span>, sharing one wall, and features a <span class="font-bold">fenced yard with a gate</span>, providing both privacy and security.`,
         img1: "https://placehold.co/800x600/D1D5DB/374151?text=Twin+Villa+Structure",
         img2: "https://placehold.co/800x600/FDE68A/854D0E?text=Twin+Villa+Render",
+        gallery: [
+            "https://placehold.co/640x480/78350F/FFFFFF?text=Twin+Villa+Lobby",
+            "https://placehold.co/640x480/92400E/FFFFFF?text=Twin+Villa+Facade"
+        ],
+        links: {
+            demo: "https://example.com/twin-villa-showcase"
+        },
         responsibilities: [
             { title: "Structural Framing Analysis", items: ["Load Calculation Table", "Modeling Structure Framing on RSA", "Reanalysis framing and panel due to reduce material cost."] },
             { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
@@ -59,6 +75,15 @@ const projectsData = {
         description: `This shophouse grand has a <span class="font-bold">classic three-story design</span> with a bright <span class="font-bold">yellow and white facade</span>. The ground floor is ideal for <span class="font-bold">shops or cafe</span>, while the upper floors provide <span class="font-bold">4 bedrooms and 5 bathrooms</span> for living space. It features <span class="font-bold">arched door, a wide front view</span>.`,
         img1: "https://placehold.co/800x600/D1D5DB/374151?text=Shop+House+Structure",
         img2: "https://placehold.co/800x600/FDE68A/854D0E?text=Shop+House+Render",
+        gallery: [
+            "https://placehold.co/640x480/F59E0B/1F2937?text=Retail+Level",
+            "https://placehold.co/640x480/FAC760/111827?text=Upper+Floors",
+            "https://placehold.co/640x480/EAB308/0F172A?text=Street+View"
+        ],
+        links: {
+            demo: "https://example.com/shop-house-tour",
+            github: "https://github.com/Dothemathboth/shop-house-grand"
+        },
         responsibilities: [
             { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
             { title: "Shop Drawing", items: ["Create Construction drawing (shop drawing)", "Material Standard for structure material."] },
@@ -79,6 +104,13 @@ const projectsData = {
         description: `This Queen villa has a <span class="font-bold">modern three-story design</span> with a <span class="font-bold">warm orange and white exterior</span>. It includes <span class="font-bold">4 bedrooms and 5 bathrooms</span>, offering spacious living areas and private balconies. The house is <span class="font-bold">partly connected to the next unit</span>, sharing one wall, and features a <span class="font-bold">fenced yard with a gate</span>, providing both privacy and security.`,
         img1: "https://placehold.co/800x600/D1D5DB/374151?text=Queen+Villa+Structure",
         img2: "https://placehold.co/800x600/FDE68A/854D0E?text=Queen+Villa+Render",
+        gallery: [
+            "https://placehold.co/640x480/7C2D12/FFFFFF?text=Queen+Villa+Atrium",
+            "https://placehold.co/640x480/451A03/FFFFFF?text=Queen+Villa+Suite"
+        ],
+        links: {
+            demo: "https://example.com/queen-villa-overview"
+        },
         responsibilities: [
             { title: "Structural Framing Analysis", items: ["Load Calculation Table", "Modeling Structure Framing on RSA", "Reanalysis framing and panel due to reduce material cost."] },
             { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
@@ -122,7 +154,44 @@ function showProjectModal(projectKey) {
         programsHTML += `<img src="${prog.src}" alt="${prog.alt}" class="rounded">`;
     });
 
-    // 3. Build Full Modal Content HTML
+    // 3. Build Links HTML (optional)
+    let linksHTML = '';
+    if (project.links) {
+        const linkLabelMap = {
+            github: 'GitHub',
+            demo: 'Live Demo',
+            docs: 'Documentation'
+        };
+
+        Object.entries(project.links).forEach(([type, url]) => {
+            if (!url) return;
+            const label = linkLabelMap[type] || 'Project Link';
+            linksHTML += `
+                <a href="${url}" target="_blank" rel="noopener noreferrer" class="project-link-chip">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>${label}</span>
+                </a>
+            `;
+        });
+    }
+
+    // 4. Build Gallery HTML (optional)
+    let galleryHTML = '';
+    if (Array.isArray(project.gallery) && project.gallery.length) {
+        const galleryItems = project.gallery.map((img, idx) => `
+            <div class="project-gallery-item">
+                <img src="${img}" alt="${project.title} Gallery ${idx + 1}" class="w-full h-full object-cover rounded-lg">
+            </div>
+        `).join('');
+
+        galleryHTML = `
+            <div class="project-gallery">
+                ${galleryItems}
+            </div>
+        `;
+    }
+
+    // 5. Build Full Modal Content HTML
     const modalBodyHTML = `
         <!-- Header -->
         <div class="flex justify-center mb-6">
@@ -144,6 +213,13 @@ function showProjectModal(projectKey) {
             <p class="text-gray-700 leading-relaxed">${project.description}</p>
         </div>
 
+        ${linksHTML ? `
+        <div class="project-links-card">
+            <h3 class="text-lg font-bold text-gray-800 mb-3 text-center">Explore Resources</h3>
+            <div class="project-links flex flex-wrap justify-center gap-3">${linksHTML}</div>
+        </div>
+        ` : ''}
+
         <!-- Main Content Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-8">
             <div class="detail-card rounded-2xl shadow-lg p-2">
@@ -153,6 +229,13 @@ function showProjectModal(projectKey) {
                 <img src="${project.img2}" alt="${project.title} Render" class="w-full h-auto object-cover rounded-lg">
             </div>
         </div>
+
+        ${galleryHTML ? `
+        <div class="project-gallery-card">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">Project Gallery</h3>
+            ${galleryHTML}
+        </div>
+        ` : ''}
 
         <!-- Key Responsibility -->
         <div class="key-resp-card rounded-2xl shadow-inner p-6 max-w-5xl mx-auto">

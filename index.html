@@ -218,8 +218,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
                         
                         <!-- Link Villa Card -->
-                        <!-- UPDATED onclick to call new JS function -->
-                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('linkVilla')">
+                        <div class="rounded-2xl shadow-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
                             <div class="card-glass p-4"> <!-- Added p-4 here to match the other cards -->
                                 <h3 class="text-center text-2xl font-bold text-slate-700 p-4 mb-0">Link Villa</h3> <!-- Added p-4 here -->
                                 <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
@@ -227,14 +226,17 @@
                                     <img src="Picture/Projects/lv.png" alt="Link Villa" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/E5E7EB/334155?text=Link+Villa'; this.onerror=null;">
                                 </div>
                             </div>
-                            <div class="card-glass-darker p-4 text-center overflow-hidden"> <!-- Added overflow-hidden -->
-                                <span class="font-semibold text-gray-700 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden space-y-3"> <!-- Added overflow-hidden -->
+                                <span class="block font-semibold text-gray-700">Explore this project</span>
+                                <div class="flex flex-wrap justify-center gap-3">
+                                    <button class="card-cta-btn" onclick="showProjectModal('linkVilla')">View Details</button>
+                                    <a class="card-cta-btn secondary" href="https://example.com/link-villa-demo" target="_blank" rel="noopener noreferrer">Open Demo</a>
+                                </div>
                             </div>
                         </div>
-    
+
                         <!-- Twin Villa Card -->
-                        <!-- UPDATED onclick to call new JS function -->
-                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('twinVilla')">
+                        <div class="rounded-2xl shadow-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
                             <div class="card-glass p-4" style="background-color: #FDF2E2;"> <!-- Light orange tint -->
                                 <h3 class="text-center text-2xl font-bold text-amber-800 p-4 mb-0">Twin Villa</h3> <!-- Added p-4 here -->
                                 <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
@@ -242,14 +244,17 @@
                                     <img src="Picture/Projects/tw.png" alt="Twin Villa" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/D1D5DB/92400E?text=Twin+Villa'; this.onerror=null;">
                                 </div>
                             </div>
-                            <div class="card-glass-darker p-4 text-center overflow-hidden" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
-                                <span class="font-semibold text-amber-800 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden space-y-3" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
+                                <span class="block font-semibold text-amber-800">Explore this project</span>
+                                <div class="flex flex-wrap justify-center gap-3">
+                                    <button class="card-cta-btn" onclick="showProjectModal('twinVilla')">View Details</button>
+                                    <a class="card-cta-btn secondary" href="https://example.com/twin-villa-showcase" target="_blank" rel="noopener noreferrer">Open Demo</a>
+                                </div>
                             </div>
                         </div>
-    
+
                         <!-- Shop House Grand Card -->
-                        <!-- UPDATED onclick to call new JS function -->
-                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('shopHouse')">
+                        <div class="rounded-2xl shadow-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
                             <div class="card-glass p-4" style="background-color: #FDF2E2;"> <!-- Light orange tint -->
                                 <h3 class="text-center text-2xl font-bold text-amber-800 p-4 mb-0">Shop House Grand</h3> <!-- Added p-4 here -->
                                 <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
@@ -257,14 +262,18 @@
                                     <img src="Picture/Projects/shg.png" alt="Shop House Grand" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/D1D5DB/92400E?text=Shop+House'; this.onerror=null;">
                                 </div>
                             </div>
-                            <div class="card-glass-darker p-4 text-center overflow-hidden" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
-                                <span class="font-semibold text-amber-800 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden space-y-3" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
+                                <span class="block font-semibold text-amber-800">Explore this project</span>
+                                <div class="flex flex-wrap justify-center gap-3">
+                                    <button class="card-cta-btn" onclick="showProjectModal('shopHouse')">View Details</button>
+                                    <a class="card-cta-btn secondary" href="https://example.com/shop-house-tour" target="_blank" rel="noopener noreferrer">Open Demo</a>
+                                    <a class="card-cta-btn secondary" href="https://github.com/Dothemathboth/shop-house-grand" target="_blank" rel="noopener noreferrer">View Repo</a>
+                                </div>
                             </div>
                         </div>
-    
+
                         <!-- Queen Villa Card -->
-                        <!-- UPDATED onclick to call new JS function -->
-                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('queenVilla')">
+                        <div class="rounded-2xl shadow-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
                             <div class="card-glass p-4" style="background-color: #FDF2E2;"> <!-- Light orange tint -->
                                 <h3 class="text-center text-2xl font-bold text-amber-800 p-4 mb-0">Queen Villa</h3> <!-- Added p-4 here -->
                                 <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
@@ -272,8 +281,12 @@
                                     <img src="Picture/Projects/qv.png" alt="Queen Villa" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/D1D5DB/92400E?text=Queen+Villa'; this.onerror=null;">
                                 </div>
                             </div>
-                            <div class="card-glass-darker p-4 text-center overflow-hidden" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
-                                <span class="font-semibold text-amber-800 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden space-y-3" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
+                                <span class="block font-semibold text-amber-800">Explore this project</span>
+                                <div class="flex flex-wrap justify-center gap-3">
+                                    <button class="card-cta-btn" onclick="showProjectModal('queenVilla')">View Details</button>
+                                    <a class="card-cta-btn secondary" href="https://example.com/queen-villa-overview" target="_blank" rel="noopener noreferrer">Open Demo</a>
+                                </div>
                             </div>
                         </div>
     
