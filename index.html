@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="portfolio, personal portfolio, web developer, full stack developer" />
+    <meta name="description" content="Welcome to my Portfolio. I am a Full-Stack Web Developer." />
+    <title>Portfolio | Bo Chanvirakboth</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" xintegrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar -->
+    <header id="header" class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center text-xl font-bold text-gray-800">
+                <!-- NOTE: Image URLs from uploaded files are used directly -->
+                <!-- Make sure the 'logo' folder is accessible relative to this HTML file -->
+                <img src="logo/bc_logo.png" alt="BC Logo" class="h-10 mr-3" onerror="this.src='https://placehold.co/100x100/000000/FFFFFF?text=Logo'; this.onerror=null;">
+                <span>Bo Chanvirakboth</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#about" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition duration-300">About</a>
+                <a href="#skills" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="#education" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition duration-300">Education</a>
+                <a href="#work" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition duration-300">Work</a>
+                <a href="#experience" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition duration-300">Experience</a>
+                <!-- REMOVED: Contact link -->
+            </div>
+            <button id="menu-btn" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white">
+            <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-700 nav-link">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-700 nav-link">About</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-700 nav-link">Skills</a>
+            <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-700 nav-link">Education</a>
+            <a href="#work" class="block py-2 px-4 text-sm hover:bg-gray-700 nav-link">Work</a>
+            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-700 nav-link">Experience</a>
+            <!-- REMOVED: Contact link -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home min-h-screen flex items-center" id="home">
+        <div id="particles-js"></div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between z-10 pt-20">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <!-- MODIFIED HEADLINE for greater impact -->
+                <h2 class="text-3x1 md:text-4xl font-extrabold text-gray-900 leading-tight">
+                    Structural Integrity<br> Built with <span class="text-yellow-500">Precision</span>
+                </h2>
+                <!-- Adjusted intro phrase -->
+                <p class="text-2xl mt-4 font-semibold">I am a <span class="typing-text"></span></p>
+                
+                <!-- NEW BUTTON GROUP -->
+                <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                    <a href="#about" class="inline-block bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-blue-800 transition duration-300">
+                        <span>About Me</span>
+                        <i class="fas fa-arrow-circle-down ml-2"></i>
+                    </a>
+                    <!-- Added Download CV Button -->
+                    <!-- This link points to resume.html, which is not included in this preview per your request -->
+                    <a href="resume.html" target="_blank" class="inline-block bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300">
+                        <span>Download CV</span>
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex justify-center md:justify-start space-x-4">
+                    <!-- NOTE: Please replace '#' with your actual social media links -->
+                    <a href="https://www.linkedin.com/in/bo-chanvirakboth-117568334" target="_blank" class="bg-gray-800 text-blue-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="https://github.com/Dothemathboth" target="_blank" class="bg-gray-800 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition duration-300"><i class="fab fa-github text-xl"></i></a>
+                    <a href="#" target="_blank" class="bg-gray-800 text-blue-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="https://www.instagram.com/heah606102020?igsh=ejR5ZXE5Z2hndHow" target="_blank" class="bg-gray-800 text-pink-500 w-12 h-12 rounded-full flex items-center justify-center hover:bg-pink-600 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://www.facebook.com/chanvirakboth.bo.9" target="_blank" class="bg-gray-800 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700 hover:text-white transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="https://t.me/VirakBoth_Bo" target="_blank" class="bg-gray-800 text-blue-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition duration-300"><i class="fab fa-telegram-plane text-xl"></i></a>
+                    <a href="https://t.me/VirakBoth_Bo" target="_blank" class="bg-gray-800 text-green-500 w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white transition duration-300"><i class="fab fa-weixin text-xl"></i></a>
+                    <a href="#" target="_blank" class="bg-gray-800 text-green-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition duration-300"><i class="fab fa-line text-xl"></i></a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <!-- EDITED PATH per user request -->
+                <img draggable="false" class="tilt w-3/4 md:w-full max-w-sm h-auto rounded-full shadow-2xl" src="Picture/Profiles/profile_picture.jpeg" alt="Profile Picture" onerror="this.src='https://placehold.co/400x400/CCCCCC/333333?text=Profile'; this.onerror=null;">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white" id="about">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-12"><i class="fas fa-user-alt"></i> About <span class="text-purple-700">Me</span></h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3 flex justify-center">
+                    <!-- EDITED PATH per user request -->
+                    <img draggable="false" class="tilt rounded-lg shadow-xl w-full max-w-xs" src="Picture/Profiles/profile2_picture.jpeg" alt="About Me Image" onerror="this.src='https://placehold.co/320x400/CCCCCC/333333?text=About'; this.onerror=null;">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-3xl font-bold">I'm Bo Chanvirakboth</h3>
+                    <p class="text-blue-800 font-semibold text-lg mt-2"><span class="role-text"></span></p>
+                    <p class="mt-4 text-gray-600 font-nunito leading-relaxed text-base" style="text-transform: none;">
+                        I am a dedicated and detail-oriented professional with a strong passion for structural engineering, quality assurance, and technical drafting. I enjoy transforming complex concepts into precise and practical designs that contribute to safe, efficient, and lasting structures.
+                        <br><br>
+                        With a strong foundation in engineering principles and a commitment to continuous improvement, I take pride in ensuring accuracy, quality, and compliance at every stage of a project. Whether it is analyzing structural elements, inspecting site work, or creating detailed drawings, I approach every task with focus and responsibility.
+                        <br><br>
+                        Beyond my professional life, I am someone who loves to read books and listen to podcasts — always seeking new ideas, knowledge, and perspectives that inspire both personal and professional growth.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-x-8 gap-y-4 font-nunito">
+                        <p><span class="font-bold text-blue-700">Email:</span> chanvirakbothbo@gmail.com</p>
+                        <p><span class="font-bold text-blue-700">Place:</span> Chbar Ampov, Phnom Penh</p>
+                    </div>
+                    <!-- This link points to resume.html, which is not included in this preview per your request -->
+                    <a href="resume.html" target="_blank" class="mt-8 inline-block bg-blue-700 text-white font-bold py-3 px-6 rounded-md shadow-lg hover:bg-blue-800 transition duration-300">
+                        <span>Resume</span>
+                        <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20" style="background: linear-gradient(to bottom, #57059e, #4a00e0);" id="skills">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center text-white mb-12"><i class="fas fa-laptop-code"></i> Skills & <span class="text-yellow-400">Abilities</span></h2>
+            <div class="bg-black bg-opacity-20 p-8 rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white" id="skillsContainer">
+                    <!-- Skills will be injected here by JavaScript -->
+                    <!-- The JS populates this from myComponent.js, which uses paths like 'picture/skills/autodesk-revit.png' -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-blue-50" id="education">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-extrabold text-center mb-4"><i class="fas fa-graduation-cap"></i> My <span class="text-purple-700">Education</span></h1>
+            <p class="text-center text-gray-600 font-nunito mb-12">"Education is not the learning of facts, but the training of the mind to think."</p>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-6 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <!-- Make sure the 'picture' folder is accessible relative to this HTML file -->
+                    <img class="w-full md:w-1/4 h-48 object-cover rounded-md" src="picture/Educations/university.png" alt="University" onerror="this.src='https://placehold.co/400x192/CCCCCC/333333?text=University'; this.onerror=null;">
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-blue-900">Bachelor's Degree of Civil Engineeering At Norton University</h3>
+                        <p class="font-semibold mt-1"></p>
+                        <h4 class="text-green-700 font-bold mt-2">2020-Present | Pursuing</h4>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-6 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <!-- Make sure the 'picture' folder is accessible relative to this HTML file -->
+                    <img class="w-full md:w-1/4 h-48 object-cover rounded-md" src="picture/Educations/school.png" alt="School" onerror="this.src='https://placehold.co/400x192/CCCCCC/333333?text=School'; this.onerror=null;">
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-blue-900">Cambodia-Japan Frienship Middle and High School</h3>
+                        <p class="font-semibold mt-1">Shri L. G. Haria Multipurpose School | CBSE</p>
+                        <h4 class="text-green-700 font-bold mt-2">2018-2020 | Completed</h4>
+                    </div>
+                </div>
+                <!-- NEW Self-Taught Section -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-6 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <img class="w-full md:w-1/4 h-48 object-cover rounded-md" src="picture/Educations/self-taught.png" alt="Self-Taught Learning">
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-blue-900">Self-Taught Learning</h3>
+                        <p class="font-semibold mt-1">YouTube, Udemy & Online Resources</p>
+                        <h4 class="text-green-700 font-bold mt-2">Ongoing</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <!-- THE OLD WORK SECTION IS REPLACED WITH THE NEW PROJECT.HTML CONTENT -->
+    <!-- I've added bg-white here to make it different from the Experience section -->
+    <section id="work" class="bg-white">
+        <div id="app-container">
+
+            <!-- 
+            ==========================================
+            MAIN PROJECTS PAGE (From image_7923e8.jpg)
+            ==========================================
+            -->
+            <div id="page-main" class="flex min-h-screen">
+                <!-- Sidebar - THIS IS THE BAR YOU SELECTED, I'VE REMOVED IT. -->
+                
+                <!-- Main Content -->
+                <main class="flex-1 p-8 md:p-12">
+                    <!-- Header -->
+                    <div class="flex justify-center mb-8">
+                        <div class="inline-flex items-center gap-3 bg-slate-800 text-white py-3 px-8 rounded-lg shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a1 1 0 001 1h12a1 1 0 001-1V5a1 1 0 000-2H3zm12 10H5V7h10v6z" clip-rule="evenodd" />
+                                <path d="M17 5v8a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1h12a1 1 0 011 1zM5 7h10v6H5V7z" />
+                            </svg>
+                            <h1 class="text-3xl font-bold">Projects</h1>
+                        </div>
+                    </div>
+    
+                    <!-- Project Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                        
+                        <!-- Link Villa Card -->
+                        <!-- UPDATED onclick to call new JS function -->
+                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('linkVilla')">
+                            <div class="card-glass p-4"> <!-- Added p-4 here to match the other cards -->
+                                <h3 class="text-center text-2xl font-bold text-slate-700 p-4 mb-0">Link Villa</h3> <!-- Added p-4 here -->
+                                <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
+                                    <!-- EDITED PATH per user request -->
+                                    <img src="Picture/Projects/lv.png" alt="Link Villa" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/E5E7EB/334155?text=Link+Villa'; this.onerror=null;">
+                                </div>
+                            </div>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden"> <!-- Added overflow-hidden -->
+                                <span class="font-semibold text-gray-700 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            </div>
+                        </div>
+    
+                        <!-- Twin Villa Card -->
+                        <!-- UPDATED onclick to call new JS function -->
+                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('twinVilla')">
+                            <div class="card-glass p-4" style="background-color: #FDF2E2;"> <!-- Light orange tint -->
+                                <h3 class="text-center text-2xl font-bold text-amber-800 p-4 mb-0">Twin Villa</h3> <!-- Added p-4 here -->
+                                <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
+                                    <!-- EDITED PATH per user request -->
+                                    <img src="Picture/Projects/tw.png" alt="Twin Villa" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/D1D5DB/92400E?text=Twin+Villa'; this.onerror=null;">
+                                </div>
+                            </div>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
+                                <span class="font-semibold text-amber-800 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            </div>
+                        </div>
+    
+                        <!-- Shop House Grand Card -->
+                        <!-- UPDATED onclick to call new JS function -->
+                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('shopHouse')">
+                            <div class="card-glass p-4" style="background-color: #FDF2E2;"> <!-- Light orange tint -->
+                                <h3 class="text-center text-2xl font-bold text-amber-800 p-4 mb-0">Shop House Grand</h3> <!-- Added p-4 here -->
+                                <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
+                                    <!-- EDITED PATH per user request -->
+                                    <img src="Picture/Projects/shg.png" alt="Shop House Grand" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/D1D5DB/92400E?text=Shop+House'; this.onerror=null;">
+                                </div>
+                            </div>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
+                                <span class="font-semibold text-amber-800 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            </div>
+                        </div>
+    
+                        <!-- Queen Villa Card -->
+                        <!-- UPDATED onclick to call new JS function -->
+                        <div class="rounded-2xl shadow-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]" onclick="showProjectModal('queenVilla')">
+                            <div class="card-glass p-4" style="background-color: #FDF2E2;"> <!-- Light orange tint -->
+                                <h3 class="text-center text-2xl font-bold text-amber-800 p-4 mb-0">Queen Villa</h3> <!-- Added p-4 here -->
+                                <div class="rounded-lg overflow-hidden aspect-video"> <!-- CHANGED: h-48 to aspect-video -->
+                                    <!-- EDITED PATH per user request -->
+                                    <img src="Picture/Projects/qv.png" alt="Queen Villa" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/D1D5DB/92400E?text=Queen+Villa'; this.onerror=null;">
+                                </div>
+                            </div>
+                            <div class="card-glass-darker p-4 text-center overflow-hidden" style="background-color: #F3DAB9;"> <!-- Added overflow-hidden -->
+                                <span class="font-semibold text-amber-800 group-hover:text-blue-600 group-hover:scale-110 group-hover:font-bold transition-all duration-300 inline-block">More Detail</span>
+                            </div>
+                        </div>
+    
+                    </div>
+                </main>
+            </div>
+    
+            <!-- 
+            ==========================================
+            ALL PROJECT DETAIL PAGES ARE REMOVED FROM HERE
+            Their content is now in the JavaScript `projectsData` object
+            ==========================================
+            -->
+    
+        </div> <!-- End #app-container -->
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-20" id="experience">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-12"><i class="fas fa-briefcase"></i> Experience</h2>
+            <div class="relative timeline">
+                <div class="timeline-container timeline-left">
+                    <div class="p-6 bg-yellow-500 text-white rounded-lg shadow-lg">
+                        <h2 class="font-bold text-xl">Self Employed</h2>
+                        <h3 class="font-semibold">Bored Pile Engineer Intern</h3>
+                        <p>Oct 2022 - Jan-2023</p>
+                    </div>
+                </div>
+                <div class="timeline-container timeline-right">
+                    <div class="p-6 bg-yellow-500 text-white rounded-lg shadow-lg">
+                        <h2 class="font-bold text-xl">Mapstreak Flyseas</h2>
+                        <h3 class="font-semibold">Web Developer | Internship</h3>
+                        <p>June 2021 - Dec 2021</p>
+                    </div>
+                </div>
+                 <div class="timeline-container timeline-left">
+                    <div class="p-6 bg-yellow-500 text-white rounded-lg shadow-lg">
+                        <h2 class="font-bold text-xl">The Spark Foundation</h2>
+                        <h3 class="font-semibold">Website Developer | Internship</h3>
+                        <p>May 2021 - June 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- REMOVED: The entire "contact" section
+    <section class="py-20 bg-blue-50" id="contact">
+        ...
+    </section>
+    -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Bo's Portfolio</h3>
+                    <p class="text-gray-400">Thank you for visiting. Let's connect and create something amazing together!</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-400 transition"><i class="fas fa-chevron-circle-right mr-2"></i>Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-400 transition"><i class="fas fa-chevron-circle-right mr-2"></i>About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-yellow-400 transition"><i class="fas fa-chevron-circle-right mr-2"></i>Skills</a></li>
+                        <li><a href="#work" class="text-gray-400 hover:text-yellow-400 transition"><i class="fas fa-chevron-circle-right mr-2"></i>Work</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-400"><i class="fas fa-phone mr-2 text-yellow-400"></i>+91 XXX-XXX-XXXX</p>
+                    <p class="text-gray-400 my-2"><i class="fas fa-envelope mr-2 text-yellow-400"></i>chanvirakbothbo@gmail.com</p>
+                    <p class="text-gray-400"><i class="fas fa-map-marked-alt mr-2 text-yellow-400"></i>Chbar Ampov, Phnom Penh</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-300 bg-gray-700 h-10 w-10 rounded-full flex items-center justify-center hover:text-yellow-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 bg-gray-700 h-10 w-10 rounded-full flex items-center justify-center hover:text-yellow-400 transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-300 bg-gray-700 h-10 w-10 rounded-full flex items-center justify-center hover:text-yellow-400 transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 border-t border-gray-700 mt-8 pt-6">
+                Designed with <i class="fa fa-heart text-red-500 pulse"></i> by <a href="#" class="text-yellow-400">Bo Chanvirakboth</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top Button -->
+    <!-- REMOVED this entire 'a' tag
+    <a href="#home" id="scroll-top" class="hidden fixed bottom-8 right-8 bg-yellow-400 w-12 h-12 rounded-full flex justify-center items-center text-gray-800 shadow-lg hover:bg-yellow-500 transition-all duration-300">
+        <i class="fas fa-angle-up text-2xl"></i>
+    </a>
+    -->
+
+    <!-- Skill Detail Modal (Acts as the "New Page") -->
+    <div id="skill-modal" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-[100] hidden overflow-y-auto">
+        <div class="container mx-auto px-6 py-12 min-h-full flex items-start justify-center">
+            <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-4xl transform transition-all duration-300 my-10">
+                <div class="flex justify-between items-center mb-6 border-b pb-4">
+                    <h3 id="modal-skill-name" class="text-4xl font-extrabold text-purple-700 flex items-center"></h3>
+                    <button id="modal-close-btn" class="text-gray-500 hover:text-red-600 transition">
+                        <i class="fas fa-times text-3xl"></i>
+                    </button>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-6 mb-8 text-center sm:text-left">
+                    <img id="modal-skill-icon" src="" alt="Skill Icon" class="h-20 w-20 p-2 bg-gray-100 rounded-full mb-4 sm:mb-0">
+                    <div class="flex-1">
+                        <p class="text-gray-600 text-lg" id="modal-skill-description"></p>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-8">
+                    <h4 class="text-xl font-bold text-gray-800">Proficiency</h4>
+                    <div class="skill-progress-bar">
+                        <div id="modal-skill-proficiency" class="skill-progress" style="width: 0%;"></div>
+                    </div>
+
+                    <h4 class="text-xl font-bold text-gray-800">Creativity / Application</h4>
+                    <div class="skill-progress-bar">
+                        <div id="modal-skill-creativity" class="skill-progress" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div id="modal-skill-projects-container">
+                    <h4 class="text-2xl font-bold text-blue-700 mb-4 border-t pt-4">Relevant Projects/Experience</h4>
+                    <ul id="modal-skill-projects" class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                        <!-- Projects list dynamically populated here -->
+                    </ul>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button id="modal-back-button" class="bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg hover:bg-yellow-600 transition duration-300">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Main Page
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- NEW: PROJECT MODAL STRUCTURE -->
+    <!-- This is the one modal that will be populated by JavaScript -->
+    <div id="project-modal">
+        <div class="project-modal-content">
+            <!-- 'X' Exit Button -->
+            <button class="project-modal-close-btn">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            
+            <!-- Content will be injected here -->
+            <div id="project-modal-body">
+                <!-- Example:
+                <div class="flex justify-center mb-6">
+                    <h1 class="text-3xl font-bold">Project Title</h1>
+                </div>
+                ...etc
+                -->
+            </div>
+            
+            <!-- 'Back to Main Page' Button -->
+            <div class="mt-8 text-center">
+                <button class="project-modal-back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Back to Main Page</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPT FOR PROJECT.HTML PAGE NAVIGATION -->
+    <!-- This script is no longer needed as we are using a modal -->
+    <!-- <script> ... </script> -->
+    
+    <!-- All major JS CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!-- Custom JavaScript -->
+    <script src="myComponent.js" defer></script>
+    
+</body>
+</html>
