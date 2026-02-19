@@ -8,8 +8,8 @@
             status: "Under Construction",
             startDate: "June 2025",
             description: `This link villa has a <span class="font-bold">modern three-story design</span> with a stylish <span class="font-bold">white-and-gray exterior</span>. It features <span class="font-bold">4 bedrooms and 5 bathrooms</span>, large glass windows for natural light, and open area that can be used for parking or relaxation. The building has a <span class="font-bold">semi-attached layout</span>, sharing a side wall with the neighboring unit, making it part of a connected villa row.`,
-            img1: "picture/projects/lv-str.png",
-            img2: "picture/projects/lv-render.png",
+            img1: "picture/Projects/lv-str.png",
+            img2: "picture/Projects/lv-render.png",
             responsibilities: [
                 { title: "Structural Framing Analysis", items: ["Load Calculation Table", "Modeling Structure Framing on RSA", "Reanalysis framing and panel due to reduce material cost."] },
                 { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
@@ -33,8 +33,8 @@
             status: "Under Construction",
             startDate: "June 2025",
             description: `This twin villa has a <span class="font-bold">modern three-story design</span> with a <span class="font-bold">warm orange and white exterior</span>. It includes <span class="font-bold">4 bedrooms and 5 bathrooms</span>, offering spacious living areas and private balconies. The house is <span class="font-bold">partly connected to the next unit</span>, sharing one wall, and features a <span class="font-bold">fenced yard with a gate</span>, providing both privacy and security.`,
-            img1: "picture/projects/tw-str.png",
-            img2: "picture/projects/tw-render.png",
+            img1: "picture/Projects/tw-str.png",
+            img2: "picture/Projects/tw-render.png",
             responsibilities: [
                 { title: "Structural Framing Analysis", items: ["Load Calculation Table", "Modeling Structure Framing on RSA", "Reanalysis framing and panel due to reduce material cost."] },
                 { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
@@ -59,8 +59,8 @@
             status: "Under Construction",
             startDate: "2025",
             description: `This shophouse grand has a <span class="font-bold">classic three-story design</span> with a bright <span class="font-bold">yellow and white facade</span>. The ground floor is ideal for <span class="font-bold">shops or cafe</span>, while the upper floors provide <span class="font-bold">4 bedrooms and 5 bathrooms</span> for living space. It features <span class="font-bold">arched door, a wide front view</span>.`,
-            img1: "picture/projects/shg-str.png",
-            img2: "picture/projects/shg-render.png",
+            img1: "picture/Projects/shg-str.png",
+            img2: "picture/Projects/shg-render.png",
             responsibilities: [
                 { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
                 { title: "Shop Drawing", items: ["Create Construction drawing (shop drawing)", "Material Standard for structure material."] },
@@ -80,8 +80,8 @@
             status: "Under Construction",
             startDate: "June 2025",
             description: `This Queen villa has a <span class="font-bold">modern three-story design</span> with a <span class="font-bold">warm orange and white exterior</span>. It includes <span class="font-bold">4 bedrooms and 5 bathrooms</span>, offering spacious living areas and private balconies. The house is <span class="font-bold">partly connected to the next unit</span>, sharing one wall, and features a <span class="font-bold">fenced yard with a gate</span>, providing both privacy and security.`,
-            img1: "picture/projects/qv-str.png",
-            img2: "picture/projects/qv-render.png",
+            img1: "picture/Projects/qv-str.png",
+            img2: "picture/Projects/qv-render.png",
             responsibilities: [
                 { title: "Structural Framing Analysis", items: ["Load Calculation Table", "Modeling Structure Framing on RSA", "Reanalysis framing and panel due to reduce material cost."] },
                 { title: "Modeler", items: ["Model Structure by using Autodesk Revit.", "Coordination structure with Architect and MEP to provide safety, structure integrity and avoided clashes and conflicts."] },
