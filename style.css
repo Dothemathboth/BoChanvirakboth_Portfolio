@@ -1,0 +1,353 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.font-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Style for the particle container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.home {
+    position: relative;
+}
+
+.nav-active {
+    color: #011aff !important;
+    border-bottom: 0.2rem solid #011aff;
+    padding-bottom: 0.5rem;
+}
+
+.pulse {
+    animation: pound 0.35s infinite alternate;
+}
+
+@-webkit-keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.timeline {
+    display: grid; /* Use grid for experience layout */
+    grid-template-columns: 1fr 6px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #020133;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-container {
+    position: relative;
+    padding: 10px 40px;
+    width: 100%; /* Important for grid item */
+}
+
+/* The containers become wider in mobile view, so we need to adjust the left/right positioning */
+.timeline-left {
+    grid-column: 1 / 2;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.timeline-right {
+    grid-column: 3 / 4;
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* Icon (bullet point) styling */
+.timeline-container::after {
+    content: '\f0b1';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid #ff9f55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    text-align: center;
+    line-height: 15px;
+    color: #02094b;
+}
+
+/* Position icons correctly */
+.timeline-left::after {
+    right: -17px;
+    left: unset;
+}
+
+.timeline-right::after {
+    left: -17px;
+    right: unset;
+}
+
+/* Arrow styling for left content */
+.timeline-left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #f68c09;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #f68c09;
+}
+
+/* Arrow styling for right content */
+.timeline-right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #f68c09;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f68c09 transparent transparent;
+}
+
+/* -- New Skill Card Styles -- */
+.skill-card {
+    background-color: #2a1b4d;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    min-height: 12rem;
+    cursor: pointer;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(42, 27, 77, 0.5);
+}
+.skill-card-content {
+     transition: filter 0.3s ease-in-out;
+     flex-grow: 1;
+}
+.skill-card:hover .skill-card-content {
+    filter: blur(3px) brightness(0.6);
+}
+.view-details-btn {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    opacity: 0;
+    transform: translateY(125%);
+    transition: all 0.3s ease-in-out;
+
+    /* Replicating Tailwind classes for the button */
+    background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800 with opacity */
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: calc(100% - 2rem);
+    text-align: center;
+}
+.skill-card:hover .view-details-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+.view-details-btn:hover {
+    background-color: rgba(31, 41, 55, 0.75); /* Darker on hover */
+}
+.skill-progress-bar {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+    height: 1rem;
+    position: relative;
+}
+.skill-progress {
+    background: linear-gradient(90deg, rgba(250,204,21,1) 0%, rgba(245,158,11,1) 100%);
+    height: 100%;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2a1b4d;
+}
+/* .skill-progress-fire styles removed */
+
+
+/* Responsive adjustments for Timeline */
+@media screen and (max-width: 768px) {
+    .timeline {
+        /* Single column layout for mobile */
+        grid-template-columns: 31px 1fr;
+        gap: 0;
+    }
+
+    .timeline::after {
+        left: 31px;
+        transform: none;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 50px; /* Adjust padding for the new timeline line position */
+        padding-right: 15px;
+        grid-column: 2 / 3; /* All containers go to the right of the line */
+        margin-bottom: 20px;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        grid-column: 2 / 3;
+        text-align: left; /* Text alignment should be left for mobile */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Move icon and arrow to the left column (position 1) */
+    .timeline-container::after {
+        left: 15px;
+        right: unset;
+    }
+
+    /* Hide the right-side arrow and create a left-side arrow */
+    .timeline-right::before,
+    .timeline-left::before {
+        right: unset;
+        left: 50px;
+        border: medium solid #f68c09;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #f68c09 transparent transparent;
+    }
+
+    .timeline-right::after {
+        left: 15px;
+    }
+
+    .timeline-right {
+        left: 0%;
+    }
+}
+
+/* STYLES FROM PROJECT.HTML ADDED BELOW */
+/* Using Inter font as default */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E5E7EB; /* Matching light gray background */
+}
+/* Custom class for the glass-morphism effect on cards */
+.card-glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.card-glass-darker {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+.detail-page-bg {
+    background-color: #E5E7EB; /* Light gray background for detail pages */
+}
+.detail-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+.key-resp-card {
+     background: rgba(229, 231, 235, 0.7); /* bg-gray-200 with opacity */
+     box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+/* Custom class for vertical text */
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+/* NEW STYLES FOR THE FULL-PAGE PROJECT MODAL */
+/* This is the main modal container, styled like the skills modal but full-screen */
+#project-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(17, 24, 39, 0.95); /* bg-gray-900 bg-opacity-95 */
+    z-index: 100;
+    display: none; /* Hidden by default */
+    overflow-y: auto;
+}
+
+/* This is the white content card inside the modal */
+.project-modal-content {
+    background-color: white;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    padding: 2rem; /* p-8 */
+    width: 100%;
+    max-width: 64rem; /* max-w-7xl, a bit smaller to show effect */
+    margin: 2.5rem auto; /* my-10 */
+    position: relative; /* Needed for the close button */
+}
+
+/* This styles the 'X' button from image_7bf503.png */
+.project-modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: #6B7280; /* text-gray-500 */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.project-modal-close-btn:hover {
+    color: #DC2626; /* hover:text-red-600 */
+}
+
+/* This styles the yellow 'Back' button from image_7bf520.png */
+.project-modal-back-btn {
+    display: inline-flex; /* Use inline-flex to align icon and text */
+    align-items: center;
+    gap: 0.5rem; /* space-x-2 */
+    background-color: #F59E0B; /* bg-yellow-500 */
+    color: #1F2937; /* text-gray-900 */
+    font-weight: 700; /* font-bold */
+    padding: 0.75rem 2rem; /* py-3 px-8 */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    transition: background-color 0.3s ease;
+}
+.project-modal-back-btn:hover {
+    background-color: #D97706; /* hover:bg-yellow-600 */
+}
